@@ -22,21 +22,24 @@ html {
     color: #a3a5ae;
     line-height: 1.7;
 }
+
 /* MOBILE FIRST LAYOUT */
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: var(--fw-light);
 }
+
 h1 span {
-    font-weight: var(--fw-medium);
+    font-weight: 600;
     color: #504f4f;
     display: inline-block;
     margin-top: 1rem;
 }
-.title-desc {
-    margin-top: 2rem;
-}
 
+.title-copy {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
 
 .main {
     display: flex;
@@ -45,34 +48,103 @@ h1 span {
     gap: 5rem;
     margin-top: 6rem;
 }
+
 .title {
     text-align: center;
 }
+
 .cards {
     display: grid;
     grid-template-columns: repeat(1, minmax(200px, 320px));
     gap: 2rem;
+    margin-bottom: 5rem;
 }
+
 .card-icon {
     display: flex;
     justify-content: flex-end;
 }
+
 .card {
     box-shadow: 0 1rem 1rem -0.5rem rgba(0 50 100 / 0.3);
     border-radius: 5px;
     padding: 2rem;
-
 }
+
+.card-heading {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #504f4f;
+}
+
+.card-copy {
+    margin-bottom: 2.3rem;
+    line-height: 1.8;
+}
+
 .border-teal {
-    border-top: 4px solid var(--clr-teal);
-}
-.border-red {
-    border-top: 4px solid var(--clr-red);
-}
-.border-yellow {
-    border-top: 4px solid var(--clr-yellow);
-}
-.border-blue {
-    border-top: 4px solid var(--clr-blue);
+    border-top: 4px solid #47d1d1;
 }
 
+.border-red {
+    border-top: 4px solid #eb5554;
+}
+
+.border-yellow {
+    border-top: 4px solid #fbad48;
+}
+
+.border-blue {
+    border-top: 4px solid #559cee;
+}
+
+@media (min-width:800px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 320px));
+        gap: 2.963vh;
+        margin-bottom: 7.407vh;
+    }
+
+    .main {
+        min-height: 100vh;
+        margin-top: 8.889vh;
+        gap: 7.407vh;
+    }
+
+    .title {
+        max-width: 600px;
+    }
+}
+
+@media (min-width:1024px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 320px));
+        grid-template-areas:
+            ".      two     ."
+            "one    two     four"
+            "one    three   four"
+            ".      three   .";
+    }
+
+    .card-one {
+        grid-area: one;
+    }
+
+    .card-two {
+        grid-area: two;
+    }
+
+    .card-three {
+        grid-area: three;
+    }
+
+    .card-four {
+        grid-area: four;
+    }
+    .title {
+        max-width: 600px;
+    }
+}
