@@ -101,6 +101,22 @@ h1 span {
 .border-blue {
     border-top: 4px solid #559cee;
 }
+.attribution {
+    max-width: 320px;
+    text-align: center;
+    background-color: #2a2929;
+    color: #95ff00;
+    margin-inline: auto;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+}
+.attribution a:link,
+.attribution a:visited {
+    text-decoration: underline;
+    color: #95ff00;
+}
 
 @media (min-width:800px) {
     .cards {
